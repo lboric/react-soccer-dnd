@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) =>
     createStyles({
         menu: {
             width: '100%',
-            height: '100vh', // TODO Ask Begovic
+            height: '100vh',
             backgroundColor: Colors.NAV_BLUE,
             color: "white",
             position: "relative",
@@ -36,19 +36,19 @@ const SideNav: React.FC = () => {
     return (
         <List component="nav" aria-labelledby="nested-list-subheader" className={classes.menu}>
             <Divider />
-            <ListItem button component={Link} to="/squads">
+            <ListItem component={Link} to="/squads">
                 <SportsSoccerOutlined className={classes.menuIcon}/>
                 <ListItemText primary="Squad" />
                 <ArrowForwardIos />
             </ListItem>
             <Divider />
-            <ListItem button component={Link} to="/players">
+            <ListItem component={Link} to="/players">
                 <PeopleOutline className={classes.menuIcon}/>
                 <ListItemText primary="Players" />
                 <ArrowForwardIos />
             </ListItem>
             <Divider />
-            <ListItem button component={Link} to="/">
+            <ListItem component={Link} to="/">
                 <TableRows className={classes.menuIcon}/>
                 <ListItemText primary="Leaderboard" />
                 <ArrowForwardIos />

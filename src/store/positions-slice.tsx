@@ -1,4 +1,4 @@
-import { PlayerPosition } from "../models/playerPositionData";
+import { PlayerPosition } from "../types/playerPositionData";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import {
     checkIfIsForbiddenPosition,
@@ -10,9 +10,10 @@ import {
     generatePositionXOnTheRight,
     generatePositionXOnTheLeft,
     generateRandomXPitchPosition,
-    generateRandomYPitchPosition, checkIfFootballIsAlreadyOnPosition
+    generateRandomYPitchPosition,
+    checkIfFootballIsAlreadyOnPosition
 } from "../utils/positionUtil";
-import { FootballPosition } from "../models/footballPositionData";
+import { FootballPosition } from "../types/footballPositionData";
 
 type PositionsState = {
     footballPosition: FootballPosition
