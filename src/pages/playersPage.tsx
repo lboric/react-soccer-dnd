@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { createStyles, makeStyles } from "@mui/styles";
 import PlayerPortrait from "../components/content/playerPortrait";
 import { GoalScoringData } from "../models/goalScoringData";
-import { Grid } from "@mui/material";
+import { Grid2 as Grid } from "@mui/material";
 import { Fonts } from "../enums/fonts";
 import DarkLabel from "../components/content/labels/darkLabel";
 
@@ -32,9 +32,9 @@ const PlayersPage: FC<Props> = (props) => {
                     Players
                 </DarkLabel>
             </div>
-            <Grid xs={12} container spacing={7} direction="row" className={classes.page}>
-                {goalScoringData.map((data) =>
-                    <Grid item>
+            <Grid size={12} container spacing={7} direction="row" className={classes.page}>
+                {goalScoringData.map((data, index) =>
+                    <Grid key={index}>
                         <PlayerPortrait name={data.name} surname={data.surname} />
                     </Grid>
                 )}
